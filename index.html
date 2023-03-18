@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>Fifteen puzzle game</h1>
+      <div id="info-box">
+        <div id="score-point">
+          <span class="text">MOVES</span>
+          <span class="num">0</span>
+        </div>
+        <div id="timepoint">
+          <span class="text">TIME</span>
+          <span class="num">00:00</span>
+        </div>
+      </div>
+      <div id="button-box">
+        <div id="start-button">
+          <span class="text">START</span>
+        </div>
+        <div id="reset-button">
+          <span class="text">RESET</span>
+        </div>
+        <div id="solve-button">
+          <span class="text">SOLVE</span>
+        </div>
+      </div>
+    </header>
+    <div id="play-box">
+      <div id="grid">
+        <div id="overlay">
+          <div id="overlay-layer"></div>
+          <div id="overlay-button">PLAY</div>
+          <div id="overlay-inner">
+            <div id="overlay-result-message"></div>
+            <div id="overlay-submessage"></div>
+          </div>
+        </div>
+        <div id="tiles-container"></div>
+        <div id="cells-container">
+          <div id="row-1" class="row">
+            <div id="position-1-1" goal="1" class="grid-cell"></div>
+            <div id="position-1-2" goal="2" class="grid-cell"></div>
+            <div id="position-1-3" goal="3" class="grid-cell"></div>
+            <div id="position-1-4" goal="4" class="grid-cell"></div>
+          </div>
+          <div id="row-2" class="row">
+            <div id="position-2-1" goal="5" class="grid-cell"></div>
+            <div id="position-2-2" goal="6" class="grid-cell"></div>
+            <div id="position-2-3" goal="7" class="grid-cell"></div>
+            <div id="position-2-4" goal="8" class="grid-cell"></div>
+          </div>
+          <div id="row-3" class="row">
+            <div id="position-3-1" goal="9" class="grid-cell"></div>
+            <div id="position-3-2" goal="10" class="grid-cell"></div>
+            <div id="position-3-3" goal="11" class="grid-cell"></div>
+            <div id="position-3-4" goal="12" class="grid-cell"></div>
+          </div>
+          <div id="row-4" class="row">
+            <div id="position-4-1" goal="13" class="grid-cell"></div>
+            <div id="position-4-2" goal="14" class="grid-cell"></div>
+            <div id="position-4-3" goal="15" class="grid-cell"></div>
+            <div id="position-4-4" goal="0" class="grid-cell"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="instructions">
+      <h3>INSTRUCTIONS</h3>
+      Play the game or watch the solution.
+      Move tiles in grid to order them from <b>1 to 15</b>.
+      To move a tile you can click on it or use your <b>arrow keys</b>.
+      Press <b>ESC</b> to pause game.
+    </div>
+  </div>
+</body>
+<script src="lib/jquery-3.6.4.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/tiles.js"></script>
+</html>
