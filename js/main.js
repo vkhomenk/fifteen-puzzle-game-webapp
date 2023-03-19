@@ -14,7 +14,7 @@ let won = false;
 const RQST_SOLVE = 0;
 const RQST_RANDOM_TILES = 1;
 
-const worker = new Worker("js/worker.js", { type: "module" });
+const worker = new Worker("js/worker.js");
 
 worker.postMessage = (worker.webkitPostMessage || worker.postMessage);
 worker.onmessage = (message) => {
@@ -154,7 +154,7 @@ function setRandomTiles(array) {
 		let y = index % 4 + 1;
 		let position = new Position(x, y, number === 0);
 		positions.push(position);
-		if (position.free) continue;
+		if (number === 0) continue;
 		let tile = new Tile(position.x, position.y, number);
 		tiles.push(tile);
 		tile.insertTile();

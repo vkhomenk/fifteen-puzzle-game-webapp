@@ -1,5 +1,5 @@
 [package]
-name = "rust_fifteen_solver"
+name = "fifteen_solver"
 version = "0.1.0"
 edition = "2021"
 

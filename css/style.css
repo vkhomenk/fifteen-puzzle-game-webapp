@@ -179,21 +179,21 @@ h1 {
 
 /* Directions */
 .move-left {
-	transform: translate(-115px, 0px);
-	-webkit-transform: translate(-115px, 0px);
+	transform: translate(-121px, 0px);
+	-webkit-transform: translate(-121px, 0px);
 }
 
 .move-right {
-	transform: translate(115px, 0px);
-	-webkit-transform: translate(115px, 0px);
+	transform: translate(121px, 0px);
+	-webkit-transform: translate(121px, 0px);
 }
 
 .move-up {
-	transform: translate(0px, -115px);
-	-webkit-transform: translate(0px, -115px);
+	transform: translate(0px, -121px);
+	-webkit-transform: translate(0px, -121px);
 }
 
 .move-down {
-	transform: translate(0px, 115px);
-	-webkit-transform: translate(0px, 115px);
+	transform: translate(0px, 121px);
+	-webkit-transform: translate(0px, 121px);
 }

@@ -14,6 +14,7 @@ class Tile {
 		let position = getGridOffset(this.x, this.y);
 		position.left += 6;
 		position.top += 6;
+
 		this.offset = position;
 		$('#tile-' + this.num).css({
 			'left': position.left,
@@ -103,7 +104,7 @@ function getFreePosition() {
 }
 
 function checkGoal() {
-	if (tiles.every(t => t.num == t.current)) {
+	if (tiles.every(tile => tile.num == tile.current)) {
 		end_game();
 	}
 }

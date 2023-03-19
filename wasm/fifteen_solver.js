@@ -1,8 +1,17 @@
-let wasm;
+let wasm_bindgen;
+(function() {
+    const __exports = {};
+    let script_src;
+    if (typeof document === 'undefined') {
+        script_src = location.href;
+    } else {
+        script_src = new URL(document.currentScript.src, location.href).toString();
+    }
+    let wasm;
 
-const heap = new Array(128).fill(undefined);
+    const heap = new Array(128).fill(undefined);
 
-heap.push(undefined, null, true, false);
+    heap.push(undefined, null, true, false);
 
 function getObject(idx) { return heap[idx]; }
 
@@ -67,7 +76,7 @@ function getInt32Memory0() {
 * @param {Uint8Array} tiles
 * @returns {string}
 */
-export function solve(tiles) {
+__exports.solve = function(tiles) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         const ptr0 = passArray8ToWasm0(tiles, wasm.__wbindgen_malloc);
@@ -80,7 +89,7 @@ export function solve(tiles) {
         wasm.__wbindgen_add_to_stack_pointer(16);
         wasm.__wbindgen_free(r0, r1);
     }
-}
+};
 
 function getArrayU8FromWasm0(ptr, len) {
     return getUint8Memory0().subarray(ptr / 1, ptr / 1 + len);
@@ -88,7 +97,7 @@ function getArrayU8FromWasm0(ptr, len) {
 /**
 * @returns {Uint8Array}
 */
-export function random_tiles() {
+__exports.random_tiles = function() {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         wasm.random_tiles(retptr);
@@ -100,7 +109,7 @@ export function random_tiles() {
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
     }
-}
+};
 
 function handleError(f, args) {
     try {
@@ -294,7 +303,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('rust_fifteen_solver_bg.wasm', import.meta.url);
+        input = script_src.replace(/\.js$/, '_bg.wasm');
     }
     const imports = getImports();
 
@@ -309,5 +318,6 @@ async function init(input) {
     return finalizeInit(instance, module);
 }
 
-export { initSync }
-export default init;
+wasm_bindgen = Object.assign(init, { initSync }, __exports);
+
+})();

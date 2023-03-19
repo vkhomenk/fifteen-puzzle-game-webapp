@@ -1,10 +1,9 @@
 {
-  "name": "rust_fifteen_solver",
+  "name": "fifteen_solver",
   "version": "0.1.0",
   "files": [
-    "rust_fifteen_solver_bg.wasm",
-    "rust_fifteen_solver.js"
+    "fifteen_solver_bg.wasm",
+    "fifteen_solver.js"
   ],
-  "module": "rust_fifteen_solver.js",
-  "sideEffects": false
+  "browser": "fifteen_solver.js"
 }
