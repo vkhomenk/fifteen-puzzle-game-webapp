@@ -3,13 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <title>Fifteen Puzzle Game</title>
+  <meta name="description" content="Fifteen Puzzle game (15 puzzle-game): move tiles in grid to order them from 1 to 15!">
+  <meta name="keywords" content="Fifteen puzzle, game, fifteen puzzle, game, tile">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div id="wrapper">
-    <header>
-      <h1>Fifteen puzzle game</h1>
+    <h1>Fifteen puzzle game</h1>
+    <div id="header">
       <div id="info-box">
         <div id="score-point">
           <span class="text">MOVES</span>
@@ -31,7 +34,7 @@
           <span class="text">SOLVE</span>
         </div>
       </div>
-    </header>
+    </div>
     <div id="play-box">
       <div id="grid">
         <div id="overlay">
@@ -78,8 +81,19 @@
       To move a tile you can click on it or use your <b>arrow keys</b>.
       Press <b>ESC</b> to pause game.
     </div>
+    <footer>
+      <div>
+        <a href="https://github.com/vkhomenk/fifteen-puzzle-game-webapp"><img src="img/github-mark.svg" width="25px" alt="GitHub Link"></img></a>
+        This app is built with wasm and Rust
+      </div>
+      <div>
+        <a href="https://github.com/vkhomenk/fifteen-puzzle-game-desktop"><img src="img/github-mark.svg" width="25px" alt="GitHub Link"></img></a>
+        It's also available for desktop
+      </div>
+    </footer>
   </div>
 </body>
+
 <script src="lib/jquery-3.6.4.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/tiles.js"></script>

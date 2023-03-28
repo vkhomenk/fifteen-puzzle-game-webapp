@@ -10,40 +10,48 @@ body {
 	padding: 0;
 	font-family: CeliaGarcia, Calibri, sans-serif !important;
 	background-color: rgba(0, 0, 0, 0.11);
-	/* background-image: url('../img/gr_pattern_bkg.png'); */
+	background-image: url('../img/gr_pattern_bkg.png');
+}
+
+#wrapper {
+	width: 625px;
+	margin: 0px auto;
+}
+
+#header {
+	text-align: center;
+	margin-bottom: 12px;
+	display: flex;
+	justify-content: center
 }
 
 h1 {
 	font-size: 40pt;
 	text-align: center;
 	text-transform: uppercase;
-	margin-bottom: 15px;
+	margin: 15px;
 }
 
 #info-box,#button-box {
-	text-align: center;
-	margin-bottom: 12px;
+	display: flex;
+	align-items: center;
 }
 
 #score-point,#timepoint {
 	width: 110px;
 	height: 60px;
 	border-radius: 5px;
-	background-color: rgba(158, 170, 255, 0.37);
-	display: inline-block;
-}
-
-#score-point {
 	margin-right: 20px;
+	background-color: rgba(158, 170, 255, 0.37);
 }
 
 #start-button,#reset-button,#solve-button {
 	width: 100px;
 	height: 40px;
 	border-radius: 5px;
+	margin-left: 10px;
 	background-color: rgba(18, 73, 7, 0.17);
-	display: inline-block;
-	cursor: pointer
+	cursor: pointer;
 }
 
 .text {
@@ -64,7 +72,7 @@ h1 {
 	clear: both;
 	height: 500px;
 	width: 500px;
-	margin: 20px auto 40px auto;
+	margin: 20px auto 20px auto;
 	background-color: rgba(0, 119, 24, 0.29);
 	border-radius: 10px;
 }
@@ -77,10 +85,6 @@ h1 {
 
 .row {
 	height: 115px;
-}
-
-#overlay-options {
-	display: none;
 }
 
 .row .grid-cell {
@@ -119,6 +123,8 @@ h1 {
 .tile:HOVER {
 	background-color: rgba(255, 255, 165, 0.88);
 }
+
+/* .tile */
 
 #overlay,#overlay-layer {
 	width: 460px;
@@ -162,12 +168,11 @@ h1 {
 	display: none;
 }
 
-#instructions {
+#instructions, footer {
 	width: 500px;
 	margin: 40px auto 0px auto;
 	font-size: 18pt;
 	padding-bottom: 25px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.23);
 }
 
 #overlay-layer {
